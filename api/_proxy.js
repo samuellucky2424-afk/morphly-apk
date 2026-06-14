@@ -62,11 +62,20 @@ async function proxySupabaseFunction(req, res, functionName) {
     headers['verif-hash'] = req.headers['verif-hash'];
   }
 
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers,
-    body: normalizeBody(req.body),
-  });
+  let response;
+  try {
+    response = await fetch(endpoint, {
+      method: 'POST',
+      headers,
+      body: normalizeBody(req.body),
+    });
+  } catch (error) {
+    res.status(502).json({
+      error: 'Failed to reach Supabase Edge Function.',
+      detail: error instanceof Error ? error.message : String(error),
+    });
+    return;
+  }
 
   const text = await response.text();
   res.status(response.status);

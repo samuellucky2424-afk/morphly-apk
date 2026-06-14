@@ -1,0 +1,4 @@
+-- Placeholder for an existing remote Supabase migration.
+-- This project already had migration 20260527000000 applied before Morphly
+-- was added. Keep this file so `supabase db push` preserves remote migration
+-- history without importing unrelated platform tables into this app repo.

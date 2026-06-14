@@ -20,6 +20,7 @@ class AppConfig {
   );
   static const vercelApiBaseUrl = String.fromEnvironment(
     'VERCEL_API_BASE_URL',
+    defaultValue: 'https://morphly-apk.vercel.app/api',
   );
 
   static bool get hasSupabase =>

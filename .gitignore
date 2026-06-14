@@ -7,6 +7,7 @@
 build/
 coverage/
 android_local_maven/
+supabase/.temp/
 
 android/.gradle/
 android/local.properties
