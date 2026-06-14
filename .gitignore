@@ -23,3 +23,5 @@ ios/Flutter/Flutter.podspec
 .env
 .env.*
 !.env.example
+
+.vercel
