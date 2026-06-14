@@ -1,0 +1,50 @@
+name: morphly
+description: Morphly AI camera app for iOS and Android.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.11.0+2
+  cupertino_icons: ^1.0.8
+  flutter_secure_storage: ^9.2.2
+  flutterwave_standard: ^1.1.0
+  google_fonts: ^6.2.1
+  http: ^1.2.2
+  image_picker: ^1.1.2
+  in_app_purchase: ^3.2.0
+  intl: ^0.19.0
+  permission_handler: ^11.3.1
+  supabase_flutter: ^2.8.0
+
+  decart_realtime_bridge:
+    path: packages/decart_realtime_bridge
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_native_splash: ^2.4.3
+
+dependency_overrides:
+  flutter_inappwebview_android:
+    path: packages/flutter_inappwebview_android
+
+flutter:
+  uses-material-design: true
+  assets:
+    - login/screen.png
+    - main_camera/screen.png
+    - purchase_credits/screen.png
+    - settings/screen.png
+    - splash_screen/screen.png
+
+flutter_native_splash:
+  color: "#050505"
+  fullscreen: true
+  android_12:
+    color: "#050505"

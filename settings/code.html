@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Morphly - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#68000a",
+                    "outline-variant": "#4d4354",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#33343c",
+                    "tertiary-container": "#ff5451",
+                    "surface-tint": "#ddb7ff",
+                    "surface-container-high": "#282a31",
+                    "error": "#ffb4ab",
+                    "secondary-fixed": "#6bff8f",
+                    "on-primary-fixed-variant": "#6900b3",
+                    "surface-dim": "#12131a",
+                    "on-tertiary-fixed": "#410004",
+                    "inverse-primary": "#842bd2",
+                    "on-tertiary-container": "#5c0008",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "card-bg": "#111111",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "on-secondary-fixed": "#002109",
+                    "inverse-surface": "#e2e1eb",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-error": "#690005",
+                    "primary-container": "#b76dff",
+                    "secondary-container": "#00b954",
+                    "primary-fixed": "#f0dbff",
+                    "on-primary-container": "#400071",
+                    "on-secondary-fixed-variant": "#005321",
+                    "secondary": "#4ae176",
+                    "tertiary": "#ffb3ad",
+                    "on-surface-variant": "#cfc2d6",
+                    "background": "#050505",
+                    "primary-fixed-dim": "#ddb7ff",
+                    "primary": "#ddb7ff",
+                    "border": "#27272A",
+                    "on-primary-fixed": "#2c0051",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-primary": "#490080",
+                    "outline": "#988d9f",
+                    "surface-container": "#1e1f26",
+                    "text-white": "#FFFFFF",
+                    "inverse-on-surface": "#2f3037",
+                    "surface-container-lowest": "#0c0e14",
+                    "surface-bright": "#383940",
+                    "on-surface": "#e2e1eb",
+                    "surface": "#090909",
+                    "on-background": "#e2e1eb",
+                    "on-secondary": "#003915",
+                    "surface-container-highest": "#33343c",
+                    "surface-container-low": "#1a1b22",
+                    "on-secondary-container": "#004119"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "4px",
+                    "stack-lg": "24px",
+                    "margin-mobile": "20px",
+                    "gutter": "12px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "button-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "page-title": ["Inter"],
+                    "app-title": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "button-lg": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "button-sm": ["15px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "page-title": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "app-title": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "button-lg": ["17px", {"lineHeight": "22px", "fontWeight": "600"}],
+                    "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e2e1eb;
+        }
+        
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #68D391;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #22C55E;
+        }
+        
+        .segment-active {
+            background-color: #22C55E;
+            color: #050505;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+        .segment-inactive {
+            background-color: transparent;
+            color: #A1A1AA;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-24 pb-32 md:pb-0 font-body-lg text-body-lg">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 m-stack-md rounded-xl overflow-hidden bg-surface/70 backdrop-blur-[20px] shadow-[0_0_15px_rgba(221,183,255,0.1)] shadow-md border border-white/10 z-50">
+<div class="flex justify-between items-center px-stack-md h-14 w-[calc(100%-32px)] mx-auto">
+<button class="text-primary hover:bg-surface-variant/50 transition-colors p-2 rounded-full focus:outline-none flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-app-title text-app-title text-primary tracking-tight">Morphly</h1>
+<button class="font-label-caps text-label-caps text-primary hover:bg-surface-variant/50 transition-colors px-3 py-1.5 rounded-full flex items-center justify-center focus:outline-none">
+                120 ⚡
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow px-margin-mobile max-w-2xl mx-auto w-full flex flex-col gap-stack-lg">
+<div class="mb-stack-sm">
+<h2 class="font-page-title text-page-title text-white">Settings</h2>
+</div>
+<!-- Preferences Card -->
+<section class="bg-card-bg border border-border rounded-xl p-stack-md flex flex-col gap-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary-fixed mb-stack-sm">Preferences</h3>
+<!-- Camera Quality -->
+<div class="flex flex-col gap-stack-sm">
+<label class="font-button-sm text-button-sm text-on-surface">Camera Quality</label>
+<div class="flex p-1 bg-surface-container-high rounded-lg border border-border">
+<button class="flex-1 py-2 font-button-sm text-button-sm rounded-md transition-all duration-200 segment-inactive hover:bg-surface-variant">Low</button>
+<button class="flex-1 py-2 font-button-sm text-button-sm rounded-md transition-all duration-200 segment-inactive hover:bg-surface-variant">Medium</button>
+<button class="flex-1 py-2 font-button-sm text-button-sm rounded-md transition-all duration-200 segment-active">High</button>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-border"></div>
+<!-- Theme Toggle -->
+<div class="flex justify-between items-center py-2">
+<div class="flex flex-col">
+<span class="font-button-sm text-button-sm text-on-surface">Dark Mode</span>
+<span class="font-body-sm text-body-sm text-outline">Optimized for low light environments</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-border appearance-none cursor-pointer z-10 top-0 left-0 transition-transform duration-200" id="toggle-dark" name="toggle-dark" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-border cursor-pointer transition-colors duration-200" for="toggle-dark"></label>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-border"></div>
+<!-- Notifications Toggle -->
+<div class="flex justify-between items-center py-2">
+<div class="flex flex-col">
+<span class="font-button-sm text-button-sm text-on-surface">Notifications</span>
+<span class="font-body-sm text-body-sm text-outline">Get alerts for complete morphs</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-border appearance-none cursor-pointer z-10 top-0 left-0 transition-transform duration-200" id="toggle-notifications" name="toggle-notifications" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-border cursor-pointer transition-colors duration-200" for="toggle-notifications"></label>
+</div>
+</div>
+</section>
+<!-- Account Card -->
+<section class="bg-card-bg border border-border rounded-xl p-stack-md flex flex-col gap-stack-md mt-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary-fixed mb-stack-sm">Account</h3>
+<!-- Subscription -->
+<div class="flex justify-between items-center py-2 cursor-pointer hover:bg-surface-container-high p-2 -mx-2 rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+<span class="font-button-sm text-button-sm text-on-surface">Pro Subscription</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary bg-secondary/10 px-2 py-1 rounded">ACTIVE</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-border"></div>
+<!-- Privacy Policy -->
+<div class="flex justify-between items-center py-2 cursor-pointer hover:bg-surface-container-high p-2 -mx-2 rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">shield</span>
+<span class="font-button-sm text-button-sm text-on-surface">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</section>
+<!-- Logout Action -->
+<div class="mt-stack-lg mb-stack-lg flex justify-center">
+<button class="font-button-lg text-button-lg text-tertiary-container hover:bg-tertiary-container/10 px-6 py-3 rounded-full transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </button>
+</div>
+</main>
+<!-- BottomNavBar (Hidden on Web) -->
+<!-- Suppressed Nav Shells on Task-Focused/Linear screens. While Settings is a destination, it's often considered task-focused and per guidelines, we hide the nav to focus on content if it's a dead end, but standard settings usually keeps navigation. We will follow instructions: 'Suppress navigation to prioritize content canvas if... Settings, Profile...' Wait, guidelines say "You MUST exclude the navigation shell if the page intent is: Linear/Transactional... Task-Focused... Any sub-page featuring a 'Close' or 'Back' action". Let's provide the bottom nav as requested in the JSON components array but mark it correctly. Wait, instructions say "You MUST ONLY render the FAB if... You MUST suppress the FAB on Settings". It doesn't explicitly say suppress the BottomNavBar on Settings unless it has a 'Back' button. Let's include it for mobile. Actually, let's omit it to keep the UI clean as a sub-page. Wait, I will include it to satisfy the component instruction but highlight Settings if it was there. The JSON tabs are: Purchase, Settings, Help, Logout for Drawer, and for BottomNavBar it's cloud_upload, radio_button_checked, visibility. Settings isn't in Bottom Nav. So I will suppress Bottom Nav. -->
+<script>
+        // Simple toggle logic for the custom checkboxes
+        document.querySelectorAll('.toggle-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if(this.checked) {
+                    this.style.transform = 'translateX(100%)';
+                } else {
+                    this.style.transform = 'translateX(0)';
+                }
+            });
+            // Initial state
+            if(checkbox.checked) {
+                 checkbox.style.transform = 'translateX(100%)';
+            }
+        });
+
+        // Segment control logic
+        const segments = document.querySelectorAll('.segment-inactive, .segment-active');
+        segments.forEach(segment => {
+            segment.addEventListener('click', function() {
+                const parent = this.parentElement;
+                parent.querySelectorAll('button').forEach(btn => {
+                    btn.classList.remove('segment-active');
+                    btn.classList.add('segment-inactive');
+                });
+                this.classList.remove('segment-inactive');
+                this.classList.add('segment-active');
+            });
+        });
+    </script>
+</body></html>

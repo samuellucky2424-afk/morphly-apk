@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ydg-fD-yQy"/>
+                        <viewControllerLayoutGuide type="bottom" id="xbc-2k-c8Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Morphly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="morphly-title">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.9529411765" green="0.9529411765" blue="0.9607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="morphly-accent">
+                                <color key="backgroundColor" red="0.1725490196" green="1" blue="0.5882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="accent-height"/>
+                                    <constraint firstAttribute="width" constant="58" id="accent-width"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="AI Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="morphly-subtitle">
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.9529411765" green="0.9529411765" blue="0.9607843137" alpha="0.58" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0196078431" green="0.0196078431" blue="0.0196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="morphly-title" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="title-center-x"/>
+                            <constraint firstItem="morphly-title" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-18" id="title-center-y"/>
+                            <constraint firstItem="morphly-accent" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="accent-center-x"/>
+                            <constraint firstItem="morphly-accent" firstAttribute="top" secondItem="morphly-title" secondAttribute="bottom" constant="14" id="accent-top"/>
+                            <constraint firstItem="morphly-subtitle" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="subtitle-center-x"/>
+                            <constraint firstItem="morphly-subtitle" firstAttribute="top" secondItem="morphly-accent" secondAttribute="bottom" constant="18" id="subtitle-top"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+</document>

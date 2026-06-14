@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="132dp"
+    android:height="132dp"
+    android:viewportWidth="132"
+    android:viewportHeight="132">
+    <path
+        android:fillAlpha="0.22"
+        android:fillColor="@color/morphly_magic"
+        android:pathData="M66,6 C99.14,6 126,32.86 126,66 C126,99.14 99.14,126 66,126 C32.86,126 6,99.14 6,66 C6,32.86 32.86,6 66,6 Z" />
+    <path
+        android:fillAlpha="0.18"
+        android:fillColor="@color/morphly_credit"
+        android:pathData="M66,20 C91.4,20 112,40.6 112,66 C112,91.4 91.4,112 66,112 C40.6,112 20,91.4 20,66 C20,40.6 40.6,20 66,20 Z" />
+    <path
+        android:fillColor="@color/morphly_magic"
+        android:pathData="M66,24 L76,55 L110,66 L76,77 L66,108 L56,77 L22,66 L56,55 Z" />
+    <path
+        android:fillColor="@color/morphly_credit"
+        android:pathData="M66,42 L72,60 L92,66 L72,72 L66,90 L60,72 L40,66 L60,60 Z" />
+</vector>

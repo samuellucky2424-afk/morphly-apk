@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/morphly_oled</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/launch_mark</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/morphly_oled</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/morphly_oled</item>
+        <item name="android:statusBarColor">@color/morphly_oled</item>
+    </style>
+
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/morphly_oled</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/morphly_oled</item>
+        <item name="android:statusBarColor">@color/morphly_oled</item>
+    </style>
+</resources>

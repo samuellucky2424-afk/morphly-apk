@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="morphly_oled">#050505</color>
+    <color name="morphly_magic">#8F5CFF</color>
+    <color name="morphly_credit">#2CFF96</color>
+</resources>
