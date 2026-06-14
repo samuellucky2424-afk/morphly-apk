@@ -69,6 +69,29 @@ See `docs/native_platform_setup.md` for Android permissions, iOS `Info.plist` ke
    supabase functions deploy store-purchase-verify
    ```
 
+## Vercel API Gateway
+
+The repo includes lightweight Vercel API routes under `api/`. They proxy the mobile app backend calls to Supabase Edge Functions:
+
+- `/api/payment-options`
+- `/api/flutterwave-webhook`
+- `/api/morph-session`
+- `/api/decart-token`
+- `/api/store-purchase-verify`
+
+In the Vercel project settings, set these environment variables:
+
+```sh
+SUPABASE_URL=https://iwausfzgitoehqecrvxc.supabase.co
+SUPABASE_ANON_KEY=your-public-anon-key
+```
+
+Then use this Flutter dart-define when you want the app to call Vercel first:
+
+```sh
+VERCEL_API_BASE_URL=https://morphly-apk.vercel.app/api
+```
+
 ## Native Decart Bridge
 
 The Flutter plugin exposes the app contract now, and the native Android/iOS files include the exact production hook points. To complete realtime rendering:

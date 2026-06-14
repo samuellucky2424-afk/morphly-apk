@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "morphly-vercel-api",
+  "version": "0.1.0",
+  "scripts": {
+    "vercel-build": "echo \"Morphly Vercel API has no build step\""
+  }
+}
